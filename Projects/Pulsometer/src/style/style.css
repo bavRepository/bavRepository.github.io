@@ -1913,8 +1913,8 @@ h2 {
   }
   .modal {
     width: 240px;
-    min-height: 200px;
-    padding: 30px 18px 35px 18px;
+    min-height: 160px;
+    padding: 18px 12px 20px 12px;
   }
   .modal__subtitle {
     font-size: 18px;
@@ -1922,7 +1922,7 @@ h2 {
   }
   .modal__descr {
     font-size: 14px;
-    margin-top: 13px;
+    margin-top: 10px;
   }
   .modal__close {
     font-size: 26px;
@@ -1944,7 +1944,7 @@ h2 {
   .feed-form_mt25 {
     width: 200px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .pageup {
     top: 8px;

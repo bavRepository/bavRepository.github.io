@@ -689,8 +689,9 @@ text-align: center;
     }
     .modal {
         width: 240px;
-        min-height: 200px;
-        padding: 30px 18px 35px 18px;
+        min-height: 160px;
+        // padding: 30px 18px 35px 18px;
+        padding: 18px 12px 20px 12px;
 
         &__subtitle {
             font-size: 18px;
@@ -699,7 +700,7 @@ text-align: center;
     
         &__descr {
             font-size: 14px;
-            margin-top: 13px;
+            margin-top: 10px;
         }
 
         &__close {
@@ -731,7 +732,7 @@ text-align: center;
         &_mt25 {
             width: 200px;
             margin: 0 auto;
-            margin-top: 20px;
+            margin-top: 15px;
         }
     }
 
