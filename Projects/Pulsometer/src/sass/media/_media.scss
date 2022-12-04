@@ -710,7 +710,11 @@ text-align: center;
         }
     
         label.error {
-            margin-bottom: 0px;
+            margin-bottom: 0;
+margin-top: 4px;
+            font-size: 13px;
+            line-height: 13px;
+            font-weight: 500px;
         }
     }
 
@@ -720,7 +724,7 @@ text-align: center;
             width: 190px;
              height: 35px;
              font-size: 12px;
-             margin-top: 5px;
+             margin: 10px auto 0 auto; 
         }
     }
 
@@ -728,12 +732,14 @@ text-align: center;
         input {
             height: 40px;
             font-size: 14px;
+            margin-bottom: 0;
+            margin-top: 8px;
         }
     
         &_mt25 {
             width: 200px;
             margin: 0 auto;
-            margin-top: 15px;
+            margin-top: 10px;
         }
     }
 
