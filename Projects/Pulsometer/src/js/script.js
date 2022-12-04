@@ -62,7 +62,7 @@ pageUpIfLess1600();
 
   $('.modal__close').on('click', function () {
     $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
-    $('.pageup').fadeIn()
+    $('.pageup').fadeOut()
     funcDone = true;
   });
 

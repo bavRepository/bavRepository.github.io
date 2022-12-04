@@ -36,23 +36,45 @@ $(document).ready(function () {
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
 
-  // Modal
+
+let funcDone = true;
+
+function pageUpIfLess1600() {
+  $(window).scroll(function () {
+    
+    if ($(this).scrollTop() > 1600 && funcDone == true) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+
+  });
+}
+
+pageUpIfLess1600();
 
   $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
+    $('.pageup').fadeOut()
+    funcDone = false;
+
   });
 
   $('.modal__close').on('click', function () {
     $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    $('.pageup').fadeOut()
+    funcDone = true;
   });
 
   $('.button_mini').each(function (i) {
     $(this).on('click', function () {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
+      $('.pageup').fadeOut()
+      funcDone = false;
     })
   });
-
+  
 
   function validation_form(form) {
     $(form).validate({
@@ -91,7 +113,6 @@ $(document).ready(function () {
   validation_form('#consultation form');
   validation_form('#order form');
 
-
   $('input[name=phone]').mask("+999 (99) 999-99-99");
 
   $('form').submit(function (e) {
@@ -100,7 +121,7 @@ $(document).ready(function () {
     }
     e.preventDefault();
     $.ajax({
-      // client-server settings such as type, url, date 
+      // client-server settings
     }).done(function () {
       // after information is send we clear inputs and value
       $(this).find("input").val("");
@@ -112,16 +133,8 @@ $(document).ready(function () {
   });
 
   // Smooth scroll up
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 1600) {
-      $('.pageup').fadeIn();
-    } else {
-      $('.pageup').fadeOut();
-    }
 
-  });
-
-  $("a[href=#up").on('click', function (event) {
+  $(".pageup").on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
 
