@@ -11,21 +11,23 @@
         iframe {
             height: 430px;
         }
+
         &__info {
             padding: 30px 40px;
             min-height: 170px;
-         }
-         &__address {
+        }
+
+        &__address {
             font-size: 18px;
             line-height: 18px;
         }
-    
+
         &__phone {
             margin-top: 26px;
             font-size: 18px;
             line-height: 18px;
         }
-    
+
         &__social {
             width: 212px;
             margin-top: 26px;
@@ -136,6 +138,7 @@
             margin: 0 10px 20px 10px;
         }
     }
+
     .footer {
 
         min-height: 400px;
@@ -143,21 +146,23 @@
         iframe {
             height: 400px;
         }
+
         &__info {
             padding: 20px 30px;
             min-height: 160px;
-         }
-         &__address {
+        }
+
+        &__address {
             font-size: 16px;
             line-height: 16px;
         }
-    
+
         &__phone {
             margin-top: 16px;
             font-size: 16px;
             line-height: 16px;
         }
-    
+
         &__social {
             width: 212px;
             margin-top: 16px;
@@ -286,10 +291,11 @@
             margin: 0 5px 10px 5px;
         }
     }
+
     .feedback {
         padding: 0 0 48px 0;
         min-height: 918px;
-        
+
         .title {
             font-size: 20px;
         }
@@ -300,18 +306,22 @@
             flex-direction: column;
             align-items: center;
             margin-top: 50px;
-         }
+        }
+
         &__img {
             margin-right: 0;
         }
+
         &__subtitle {
             margin-top: 20px;
             text-align: center;
         }
+
         &__count {
-text-align: center;
+            text-align: center;
             margin-top: 4px;
         }
+
         &__descr {
             font-weight: 300;
             font-size: 16px;
@@ -321,6 +331,7 @@ text-align: center;
             text-align: center;
         }
     }
+
     .footer {
 
         min-height: 380px;
@@ -328,33 +339,37 @@ text-align: center;
         iframe {
             height: 380px;
         }
+
         &__info {
             padding: 10px 20px;
             min-height: 126px;
-         }
-         &__address {
+        }
+
+        &__address {
             font-size: 14px;
             line-height: 14px;
         }
-    
+
         &__phone {
             margin-top: 16px;
             font-size: 16px;
             line-height: 16px;
         }
-    
+
         &__social {
             width: 126px;
             margin-top: 16px;
         }
+
         &__social-item {
             width: 30px;
             height: 30px;
+
             img {
                 width: 15px;
                 height: 15px;
             }
-            }
+        }
     }
 }
 
@@ -562,6 +577,7 @@ text-align: center;
             &__link {
                 margin-top: 4px;
             }
+
             hr {
                 margin-top: 10px;
                 margin-bottom: 10px;
@@ -645,11 +661,13 @@ text-align: center;
             }
         }
     }
+
     .feedback {
         &__item {
             margin-top: 25px;
             width: 80%;
         }
+
         &__img {
             width: 120px;
             height: 120px;
@@ -662,22 +680,24 @@ text-align: center;
         iframe {
             height: 300px;
         }
+
         &__info {
             width: 215px;
             padding: 0;
             min-height: 92px;
-         }
-         &__address {
+        }
+
+        &__address {
             font-size: 12px;
             line-height: 12px;
         }
-    
+
         &__phone {
             margin-top: 10px;
             font-size: 12px;
             line-height: 12px;
         }
-    
+
         &__social {
             width: 120px;
             margin-top: 10px;
@@ -687,17 +707,17 @@ text-align: center;
             border: 1px solid #FFFFFF;
         }
     }
+
     .modal {
         width: 240px;
         min-height: 160px;
-        // padding: 30px 18px 35px 18px;
         padding: 18px 12px 20px 12px;
 
         &__subtitle {
             font-size: 18px;
             line-height: 18px;
         }
-    
+
         &__descr {
             font-size: 14px;
             margin-top: 10px;
@@ -708,10 +728,10 @@ text-align: center;
             line-height: 14px;
             right: -20px;
         }
-    
+
         label.error {
             margin-bottom: 0;
-margin-top: 4px;
+            margin-top: 4px;
             font-size: 13px;
             line-height: 13px;
             font-weight: 500px;
@@ -722,9 +742,9 @@ margin-top: 4px;
     .button {
         &_subbmit {
             width: 190px;
-             height: 35px;
-             font-size: 12px;
-             margin: 10px auto 0 auto; 
+            height: 35px;
+            font-size: 12px;
+            margin: 10px auto 0 auto;
         }
     }
 
@@ -735,7 +755,7 @@ margin-top: 4px;
             margin-bottom: 0;
             margin-top: 8px;
         }
-    
+
         &_mt25 {
             width: 200px;
             margin: 0 auto;

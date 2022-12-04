@@ -67,7 +67,7 @@ pageUpIfLess1600();
       $('.pageup').fadeOut('slow');
     })
   });
-
+  
 
   function validation_form(form) {
     $(form).validate({
