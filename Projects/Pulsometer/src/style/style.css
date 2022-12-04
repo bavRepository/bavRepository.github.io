@@ -1936,6 +1936,7 @@ h2 {
     width: 190px;
     height: 35px;
     font-size: 12px;
+    margin-top: 5px;
   }
   .feed-form input {
     height: 40px;
