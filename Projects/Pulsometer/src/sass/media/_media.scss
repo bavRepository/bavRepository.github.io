@@ -487,22 +487,22 @@ text-align: center;
             text-align: center;
         }
 
-        .feed-form {
-            margin-top: 20px;
-            width: 240px;
+        // .feed-form {
+        //     margin-top: 20px;
+        //     width: 240px;
 
-            input {
-                height: 35px;
-            }
+        //     input {
+        //         height: 25px;
+        //     }
 
-            .button_subbmit {
-                width: 70%;
-                height: 34px;
-                font-size: 11px;
-                margin: 0 auto;
-                margin-top: 21px;
-            }
-        }
+        //     .button_subbmit {
+        //         width: 70%;
+        //         height: 34px;
+        //         font-size: 11px;
+        //         margin: 0 auto;
+        //         margin-top: 21px;
+        //     }
+        // }
 
     }
 
@@ -686,5 +686,59 @@ text-align: center;
         &__social-item {
             border: 1px solid #FFFFFF;
         }
+    }
+    .modal {
+        width: 240px;
+        min-height: 200px;
+        padding: 25px 18px 30px 18px;
+
+        &__subtitle {
+            font-size: 18px;
+            line-height: 18px;
+        }
+    
+        &__descr {
+            font-size: 14px;
+            margin-top: 13px;
+        }
+
+        &__close {
+            font-size: 26px;
+            line-height: 14px;
+            right: -20px;
+        }
+    
+        label.error {
+            margin-bottom: 0px;
+        }
+    }
+
+
+    .button {
+        &_subbmit {
+            width: 190px;
+             height: 35px;
+             font-size: 12px;
+        }
+    }
+
+    .feed-form {
+        input {
+            height: 40px;
+            font-size: 14px;
+        }
+    
+        &_mt25 {
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+
+    .pageup {
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
     }
 }

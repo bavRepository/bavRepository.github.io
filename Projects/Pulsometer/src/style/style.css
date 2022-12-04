@@ -739,7 +739,8 @@ progress {
   text-decoration: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-bottom: 0;
 }
 
@@ -1765,20 +1766,6 @@ h1, h2 {
     line-height: 24px;
     text-align: center;
   }
-  .consultation .feed-form {
-    margin-top: 20px;
-    width: 240px;
-  }
-  .consultation .feed-form input {
-    height: 35px;
-  }
-  .consultation .feed-form .button_subbmit {
-    width: 70%;
-    height: 34px;
-    font-size: 11px;
-    margin: 0 auto;
-    margin-top: 21px;
-  }
   .carousel .slick-dots button {
     width: 1.5rem;
     height: 1.5rem;
@@ -1923,5 +1910,46 @@ h1, h2 {
   }
   .footer__social-item {
     border: 1px solid #FFFFFF;
+  }
+  .modal {
+    width: 240px;
+    min-height: 200px;
+    padding: 25px 18px 30px 18px;
+  }
+  .modal__subtitle {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .modal__descr {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+  .modal__close {
+    font-size: 26px;
+    line-height: 14px;
+    right: -20px;
+  }
+  .modal label.error {
+    margin-bottom: 0px;
+  }
+  .button_subbmit {
+    width: 190px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .feed-form input {
+    height: 40px;
+    font-size: 14px;
+  }
+  .feed-form_mt25 {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .pageup {
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
   }
 }

@@ -38,18 +38,24 @@ $(document).ready(function () {
 
   // Modal
 
+
+
+
   $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
+    $('.pageup').fadeOut('slow');
   });
 
   $('.modal__close').on('click', function () {
     $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    $('.pageup').fadeIn('slow');
   });
 
   $('.button_mini').each(function (i) {
     $(this).on('click', function () {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
+      $('.pageup').fadeOut('slow');
     })
   });
 
@@ -100,7 +106,7 @@ $(document).ready(function () {
     }
     e.preventDefault();
     $.ajax({
-      // client-server settings such as type, url, date 
+      // client-server settings
     }).done(function () {
       // after information is send we clear inputs and value
       $(this).find("input").val("");
@@ -112,6 +118,7 @@ $(document).ready(function () {
   });
 
   // Smooth scroll up
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 1600) {
       $('.pageup').fadeIn();
@@ -121,7 +128,7 @@ $(document).ready(function () {
 
   });
 
-  $("a[href=#up").on('click', function (event) {
+  $(".pageup").on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
 
