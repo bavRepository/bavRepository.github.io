@@ -37,9 +37,14 @@ $(document).ready(function () {
   toggleSlide('.catalog-item__back');
 
   // Modal
-function pageUpIfLess1600() {
+
+  $('.pageup').fadeOut()
+
+var bool = true;
+function pageUpIfLess1600(flag) {
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 1600) {
+    console.log(flag);
+    if ($(this).scrollTop() > 1600 & flag == true) {
       $('.pageup').fadeIn();
     } else {
       $('.pageup').fadeOut();
@@ -48,23 +53,30 @@ function pageUpIfLess1600() {
   });
 }
 
-pageUpIfLess1600();
+pageUpIfLess1600(bool);
 
   $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
-    pageUpIfLess1600();
+    // $('.pageup').fadeOut();
+    $('.pageup').fadeOut()
+    bool = false;
+    pageUpIfLess1600(bool);
+
   });
 
   $('.modal__close').on('click', function () {
     $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
-    pageUpIfLess1600();
+    $('.pageup').fadeOut()
+    bool = false;
+    pageUpIfLess1600(bool);
   });
 
   $('.button_mini').each(function (i) {
     $(this).on('click', function () {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
-      $('.pageup').fadeOut('slow');
+      $('.pageup').fadeOut()
+      bool = false;
     })
   });
   

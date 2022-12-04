@@ -1926,8 +1926,8 @@ h2 {
   }
   .modal__close {
     font-size: 26px;
-    line-height: 14px;
-    right: -20px;
+    line-height: 26px;
+    right: -25px;
   }
   .modal label.error {
     margin-bottom: 0;
@@ -1942,8 +1942,12 @@ h2 {
     font-size: 12px;
     margin: 10px auto 0 auto;
   }
+  .feed-form {
+    width: 200px;
+    margin-top: 12px;
+  }
   .feed-form input {
-    height: 40px;
+    height: 35px;
     font-size: 14px;
     margin-bottom: 0;
     margin-top: 8px;
