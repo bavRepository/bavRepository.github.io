@@ -963,6 +963,7 @@ h2 {
   border: none;
   text-align: center;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .carousel {
@@ -1765,6 +1766,11 @@ h2 {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+  }
+  .consultation label.error {
+    font-size: 13px;
+    line-height: 13px;
+    margin-top: 5px;
   }
   .carousel .slick-dots button {
     width: 1.5rem;
