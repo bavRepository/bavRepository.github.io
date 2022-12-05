@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+  let funcDone = true;
+
   $('.carousel__inner').slick({
     autoplay: true,
     autoplaySpeed: 3000,
@@ -23,19 +26,10 @@ $(document).ready(function () {
       .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
       .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
 
-      $('.catalog-item__list_active').each(function (i) {
-        $('.catalog-item__list_active').eq(i).removeClass('catalog-item__list_active');
-        $('.catalog-item__content').eq(i).addClass('catalog-item__content_active');
-        })
+      $('.catalog-item__list_active').removeClass('catalog-item__list_active');
+      $('.catalog-item__content').addClass('catalog-item__content_active');
     });
 
-
-  
-
-
-
-      
-  
 
   function toggleSlide(item) {
     $(item).each(function (i) {
@@ -63,12 +57,15 @@ $(document).ready(function () {
       && div.has(e.target).length === 0) { // и не по его дочерним элементам
       div.fadeOut("slow"); // скрываем его
       over.fadeOut("slow");
+
     }
+    funcDone = true;
+    pageUpIfLess1600();
   });
 
 
 
-  let funcDone = true;
+ 
 
   function pageUpIfLess1600() {
     $(window).scroll(function () {
@@ -93,7 +90,11 @@ $(document).ready(function () {
         clearForm();
         $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
       }
+
+      funcDone = true;
+      pageUpIfLess1600();
     });
+    
   }
 
   function enterSubmit(sel) {
@@ -146,6 +147,7 @@ $(document).ready(function () {
     clearForm();
     $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     $('.pageup').fadeOut();
+    pageUpIfLess1600();
 
 
     funcDone = true;
