@@ -51,7 +51,7 @@ $(document).ready(function () {
       && div.has(e.target).length === 0) { // и не по его дочерним элементам
       div.fadeOut("slow"); // скрываем его
       over.fadeOut("slow");
-
+      clearForm();
     }
     pageUpIfLess1600();
   });
