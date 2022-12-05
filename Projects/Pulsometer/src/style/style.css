@@ -1045,9 +1045,12 @@ h2 {
   margin: 5px;
   margin-bottom: 0;
   padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 300;
   font-size: 18px;
-  line-height: 48px;
+  line-height: 18px;
   color: #6B6B6B;
   text-transform: uppercase;
   text-align: center;
@@ -1362,8 +1365,8 @@ h2 {
 .pageup {
   display: none;
   position: fixed;
-  bottom: 40px;
-  right: 60px;
+  bottom: 20px;
+  right: 20px;
   width: 40px;
   height: 40px;
 }
@@ -1932,11 +1935,5 @@ h2 {
     width: 200px;
     margin: 0 auto;
     margin-top: 10px;
-  }
-  .pageup {
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
   }
 }

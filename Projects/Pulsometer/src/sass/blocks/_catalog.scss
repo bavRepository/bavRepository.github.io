@@ -17,10 +17,12 @@
         border: 2px solid #D0D0D0;
         margin: 5px;
         @include ul-pl-mb-0;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-weight: 300;
         font-size: 18px;
-        line-height: 48px;
+        line-height: 18px;
         color: #6B6B6B;
         text-transform: uppercase;
         text-align: center;

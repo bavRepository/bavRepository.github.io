@@ -36,13 +36,17 @@ $(document).ready(function () {
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
 
+  var mql = window.matchMedia('(max-width: 575.98px)');
+  // if (mql.matches) {
+  //   $('.pageup').fadeOut();
+  // }
 
 let funcDone = true;
 
 function pageUpIfLess1600() {
   $(window).scroll(function () {
     
-    if ($(this).scrollTop() > 1600 && funcDone == true) {
+    if ($(this).scrollTop() > 1600 && funcDone==true && !mql.matches) {
       $('.pageup').fadeIn();
     } else {
       $('.pageup').fadeOut();
