@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   let funcDone = true;
+  let mql = window.matchMedia('(max-width: 575.98px)');
 
   $('.carousel__inner').slick({
     autoplay: true,
@@ -25,11 +26,9 @@ $(document).ready(function () {
       $(this)
       .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
       .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
-
       $('.catalog-item__list_active').removeClass('catalog-item__list_active');
       $('.catalog-item__content').addClass('catalog-item__content_active');
     });
-
 
   function toggleSlide(item) {
     $(item).each(function (i) {
@@ -44,11 +43,6 @@ $(document).ready(function () {
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
 
-  var mql = window.matchMedia('(max-width: 575.98px)');
-
-
-
-
   $(document).mouseup(function (e) { // событие клика по веб-документу
     const over = $('.overlay');
     const div = $("#consultation, #order, #thanks"); // тут указываем ID элемента
@@ -59,13 +53,8 @@ $(document).ready(function () {
       over.fadeOut("slow");
 
     }
-    funcDone = true;
     pageUpIfLess1600();
   });
-
-
-
- 
 
   function pageUpIfLess1600() {
     $(window).scroll(function () {
@@ -75,14 +64,10 @@ $(document).ready(function () {
       } else {
         $('.pageup').fadeOut();
       }
-
     });
   }
 
-
-
   pageUpIfLess1600();
-
 
   function escFromModal() {
     $(document).keyup((e) => {
@@ -90,8 +75,6 @@ $(document).ready(function () {
         clearForm();
         $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
       }
-
-      funcDone = true;
       pageUpIfLess1600();
     });
     
@@ -100,28 +83,25 @@ $(document).ready(function () {
   function enterSubmit(sel) {
     const btn_sub = $(sel);
 
-    // btn_sub.focus();
     $(document).keyup((e) => {
       if (e.keyCode === 13) {
         call_submit();
       }
     });
   }
+
   $('.button_mini').each(function (i) {
 
     $(this).on('click', function () {
-
       escFromModal();
       enterSubmit();   /* '.feed-form_mt25 .button_subbmit' */
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
       $('.pageup').fadeOut()
       $('.feed-form_mt25 .button_subbmit').focus();
-      funcDone = false;
-
+      !funcDone;
     })
   });
-
 
   $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
@@ -129,8 +109,7 @@ $(document).ready(function () {
     $('.button_subbmit').focus();
     enterSubmit('.button_subbmit');
     escFromModal();
-    funcDone = false;
-
+    !funcDone;
   });
 
   function clearForm() {
@@ -141,16 +120,11 @@ $(document).ready(function () {
     $('form input').removeClass('error');
   }
 
-
-
   $('.modal__close').on('click', function () {
     clearForm();
     $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     $('.pageup').fadeOut();
     pageUpIfLess1600();
-
-
-    funcDone = true;
   });
 
   $('.button_mini').each(function (i) {
@@ -160,11 +134,9 @@ $(document).ready(function () {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
       $('.pageup').fadeOut()
-      funcDone = false;
-
+      !funcDone;
     })
   });
-
 
   function validation_form(form) {
     $(form).validate({
@@ -214,7 +186,6 @@ $(document).ready(function () {
       $.ajax({
         // client-server settings
       }).done(function () {
-        // after information is send we clear inputs and value
         $(this).find("input").val("");
         $('#consultation, #order').fadeOut('fast');
         $('.overlay, #thanks').fadeIn('fast');
@@ -224,8 +195,6 @@ $(document).ready(function () {
     });
   }
   call_submit();
-
-  // Smooth scroll up
 
   $(".pageup").on('click', function (event) {
     if (this.hash !== "") {
