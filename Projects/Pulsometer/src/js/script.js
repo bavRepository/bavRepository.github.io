@@ -43,13 +43,13 @@ $(document).ready(function () {
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
 
-  $(document).mouseup(function (e) { // событие клика по веб-документу
+  $(document).mouseup(function (e) { 
     const over = $('.overlay');
-    const div = $("#consultation, #order, #thanks"); // тут указываем ID элемента
+    const div = $("#consultation, #order, #thanks"); 
 
-    if (!div.is(e.target) // если клик был не по нашему блоку
-      && div.has(e.target).length === 0) { // и не по его дочерним элементам
-      div.fadeOut("slow"); // скрываем его
+    if (!div.is(e.target) 
+      && div.has(e.target).length === 0) { 
+      div.fadeOut("slow"); 
       over.fadeOut("slow");
       clearForm();
     }
