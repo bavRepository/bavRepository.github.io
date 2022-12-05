@@ -1833,26 +1833,9 @@ h2 {
     height: 38px;
     font-size: 14px;
   }
-  .catalog-item__wrapper {
-    display: flex;
-    width: calc(200% + 40px);
-  }
-  .catalog-item__content {
-    width: 50%;
-    transform: translateX(-100%);
-    transition: 0.5s all;
-  }
-  .catalog-item__content_active {
-    transform: translateX(0%);
-    margin-right: 20px;
-  }
   .catalog-item__list {
-    position: relative;
-    width: 50%;
     margin-left: 20px;
-    transform: translateX(0%);
     padding-right: 20px;
-    transition: 0.5s all;
     padding-left: 19px;
     margin-bottom: 0;
   }
@@ -1860,24 +1843,11 @@ h2 {
     transform: translateX(-100%);
     margin-left: 0;
   }
-  .catalog-item__list li {
-    margin-top: 20px;
-    font-weight: 300;
-    font-size: 14px;
-    color: #555555;
-    position: relative;
-    display: flex;
-    align-items: center;
+  .catalog-item__list ul li {
+    margin-top: 15px;
   }
-  .catalog-item__list li:before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    left: -22px;
-    top: 7px;
-    background: #C70101;
+  .catalog-item__list ul li:before {
+    left: -18px;
   }
   .catalog-item__back {
     transform: translateX(calc(-50% - 9px));
