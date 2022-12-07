@@ -1,0 +1,16 @@
+@media (max-width: 575.98px) {
+    .promo {
+        background: url('../assets/img/main_bg.jpg')  center (center/cover) no-repeat;
+        &__title {
+            text-shadow: 1px 1px 2px black, 0 0 1em red;
+            width: 300px;
+            font-size: 26px;
+            line-height: 39px;
+        }
+    }
+
+    .sidepanel {
+        display: none;
+    }
+
+}
