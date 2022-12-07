@@ -54,6 +54,7 @@ $(document).ready(function () {
       clearForm();
     }
     pageUpIfLess1600();
+    
   });
 
   function pageUpIfLess1600() {
