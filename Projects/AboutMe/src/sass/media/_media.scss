@@ -1,11 +1,129 @@
+@media (min-width: 1400) {
+    .sidepanel {
+        display: none;
+
+        &.horizontal {
+            display: none;
+        }
+
+        &.vertical {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 1399.98px) {
+
+    .sidepanel {
+        padding-left: 10px;
+        margin-top: 12px;
+        top: auto;
+        left: auto;
+        position: static;
+        width: 340px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: auto;
+        background-color: transparent;
+
+        &__divider {
+            order: 2;
+            width: 70px;
+            height: 2px;
+            background: #000;
+        }
+
+        &__text {
+            order: 1;
+            height: auto;
+            width: 150px;
+
+            span {
+                display: block;
+                width: 150px;
+                transform: none;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                color: #000000;
+            }
+        }
+
+        a {
+
+            transform: rotate(90deg);
+
+            &:nth-child(1) {
+                order: 3;
+            }
+
+            &:nth-child(2) {
+                order: 4;
+            }
+
+            &:nth-child(3) {
+                order: 5;
+            }
+        }
+
+        &_vertical {
+            display: none;
+        }
+
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+
+
+    .promo {
+        padding-left: 30px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 767.98px) {
+    .promo {
+        &__title {
+            font-size: 38px;
+            line-height: 42px;
+        }
+}
+}
+
 @media (max-width: 575.98px) {
     .promo {
+        padding-left: 14px;
 
         &__title {
-            text-shadow: 1px 1px 30px black, 2px 2px 2em $main-color;   /* red */
             width: 300px;
             font-size: 26px;
             line-height: 39px;
+        }
+
+        &__subtitle {
+            position: relative;
+            z-index: 2;
+            padding-left: 10px;
+            @include before_circle;
+        }
+
+        &__btns {
+            margin-top: 25px;
+            display: flex;
+            width: 280px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 5px;
         }
     }
 
