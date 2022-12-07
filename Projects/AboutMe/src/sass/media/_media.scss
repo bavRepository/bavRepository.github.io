@@ -2,6 +2,7 @@
     .promo {
         // background: url('../assets/img/main_bg.jpg')  center (center/cover) no-repeat;
         // background: url('../assets/img/main_bg.jpg')  center (center/cover) no-repeat;
+        background: url('../assets/img/main_bg.jpg') no-repeat 50%/cover;
         &__title {
             text-shadow: 1px 1px 30px black, 0 0 1em $main-color;   /* red */
             width: 300px;
