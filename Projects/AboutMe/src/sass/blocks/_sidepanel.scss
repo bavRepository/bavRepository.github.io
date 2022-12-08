@@ -8,12 +8,11 @@
         justify-content: space-between;
         align-items: center;
         z-index: 3;
-        background-color: rgba(245, 245, 245, 0.3);
 
         &__divider {
             width: 2px;
             height: 70px;
-            background: #000;
+            background: #fff;
         }
 
         &__text {
@@ -27,11 +26,12 @@
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 24px;
-                color: #000000;
+                color: #fff;
             }
         }
 
         &__link {
+            display: block;
             &:hover {
                 transform: scale(1.3);
 
