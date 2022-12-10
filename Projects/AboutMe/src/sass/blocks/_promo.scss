@@ -2,12 +2,11 @@
     min-height: 100vh;
     min-height: 800px;
     position: relative;
-    background: url('../assets/img/main_bg_up.jpg') center (center/cover) no-repeat;
+    background: url('../assets/img/main_bg_up.jpg') no-repeat 50%/cover;
     padding-top: 205px;
 
     &__title {
         text-shadow: 1px 1px 30px #B0C4DE, 1px 1px 25px #2F4F4F;
-        // text-shadow: 1px 1px 30px #00BFFF, 1px 1px 25px #2F4F4F;
         width: 535px;
         margin-top: 10px;
     }

@@ -22,7 +22,7 @@
         padding-top: 6px;
 
         .divider {
-            margin-top: 0;
+            margin: 0;
 
         }
     }
@@ -55,11 +55,14 @@
         }
         &-circle {
             position: relative;
-            padding-top: 18px;
+            padding-top: 15px;
             padding-left: 15px;
             @include before_circle;
             &:before {
-                top:3px;
+                top: 0;
+            }
+            &.mobile {
+                padding-left: 18px;
             }
         }
 
