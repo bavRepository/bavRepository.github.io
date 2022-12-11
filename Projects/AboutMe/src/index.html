@@ -620,11 +620,11 @@
                     </div>
                     <form action="#" class="contacts__form">
                         <div  class="contacts__input">
-                            <input name="name" id="name" type="text" placeholder="John">
+                            <input required name="name" id="name" type="text" placeholder="John">
                             <label for="contacts-name">Your name:</label>
                         </div>
                         <div class="contacts__input">
-                            <input name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email">
                             <label for="contacts-email">Your e-mail:</label>
                         </div>
                         <div class="contacts__textarea">
@@ -632,8 +632,12 @@
                         <label for="textarea">Your message:</label>
                         
                         </div>
-                        <div>
+                        <div class="contacts__triggers">
                             <button class="contacts__btn btn title title_fz21">Send message</button>
+                            <div class="contacts__policy">
+                                <input required type="checkbox">
+                                <span>I have read and agree to the <a href="./policy.html">Privacy Policy</a></span>
+                            </div>
                         </div>
                         
                     </form>
