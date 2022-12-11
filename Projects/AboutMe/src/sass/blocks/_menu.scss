@@ -81,21 +81,17 @@
 
     &__social {
         align-self: center;
-        width: 90px;
+        // min-width: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: absolute;
         bottom: 50px;
         left: 50%;
+        gap: 15px;
         transform: translateX(calc(-50%));
 
         a {
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-
             &:hover {
                 svg {
                     width: 22px;
