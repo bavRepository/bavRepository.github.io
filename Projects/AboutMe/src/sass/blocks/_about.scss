@@ -2,6 +2,7 @@
     padding-top: 120px;
 
     &__wrapper {
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 400px 670px;
         grid-template-rows: minmax(245px, auto) minmax(255px, auto);
@@ -20,11 +21,6 @@
 
     &__descr {
         padding-top: 6px;
-
-        .divider {
-            margin: 0;
-
-        }
     }
 
     &__text {
@@ -38,7 +34,11 @@
     &__title {
         position: relative;
         padding-left: 12px;
+        margin-bottom: 0;
         @include before_circle;
+    }
+    &__subtitle {
+        margin-top: 6px;
     }
 
     &__skills {

@@ -91,13 +91,18 @@
         transform: translateX(calc(-50%));
 
         a {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
             &:hover {
                 svg {
                     width: 22px;
                     height: 22px;
                 }
-
             }
+
         }
     }
 
@@ -127,6 +132,7 @@
     &.hidden {
         display: none;
     }
+
     span {
         display: block;
         width: 30px;
