@@ -608,28 +608,34 @@
                         Any convenient way for you:
                     </div>
                     <div class="contacts__social">
-                        <a href="#" class="contacts__link"><img src="assets/icons/social/Facebook.svg"
+                        <a href="#" class="contacts__link"><img src="assets/icons/social/Facebook_ver.svg"
                                 alt="facebook"></a>
                         <a href="#" class="contacts__link"><img src="assets/icons/social/telegram.svg"
                                 alt="telegram"></a>
-                        <a href="#" class="contacts__link"><img src="assets/icons/social/Instagram.svg"
+                        <a href="#" class="contacts__link"><img src="assets/icons/social/Instagram_ver.svg"
                                 alt="instagram"></a>
                     </div>
                     <div class="contacts__text">
                         Or leave your details and I will contact you:
                     </div>
                     <form action="#" class="contacts__form">
-                        <div id="contacts-name" class="contacts__input">
-                            <input name="name" type="text" placeholder="John">
+                        <div  class="contacts__input">
+                            <input name="name" id="name" type="text" placeholder="John">
                             <label for="contacts-name">Your name:</label>
                         </div>
                         <div class="contacts__input">
-                            <input name="email" id="contacts-email" type="email">
+                            <input name="email" id="email" type="email">
                             <label for="contacts-email">Your e-mail:</label>
                         </div>
-                        <textarea name="text" id="textarea" class="contacts__textarea"></textarea>
+                        <div class="contacts__textarea">
+                            <textarea name="text" id="text" class="contacts__textarea-item"></textarea>
                         <label for="textarea">Your message:</label>
-                        <button class="btn title title_fz21">Отправить сообщение</button>
+                        
+                        </div>
+                        <div>
+                            <button class="contacts__btn btn title title_fz21">Send message</button>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
