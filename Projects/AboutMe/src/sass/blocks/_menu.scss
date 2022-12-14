@@ -81,7 +81,6 @@
 
     &__social {
         align-self: center;
-        // min-width: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -115,7 +114,7 @@
 
 .hamburger {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 30px;
     display: flex;
     flex-direction: column;

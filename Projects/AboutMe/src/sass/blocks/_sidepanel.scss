@@ -16,13 +16,13 @@
     }
 
     &__text {
-        height: 150px;
+        height: 107px;
         width: 25px;
 
         span {
             display: block;
-            width: 150px;
-            transform: rotate(-90deg) translate(-36%, -260%);
+            width: 107px;
+            transform: rotate(-90deg) translate(-36%, -176%);
             font-weight: 700;
             font-size: 16px;
             line-height: 24px;
@@ -42,6 +42,54 @@
 
     &_horizontal {
         display: none;
+
+        padding-left: 10px;
+        margin-top: 5px;
+        top: auto;
+        left: auto;
+        position: static;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: auto;
+        gap: 15px;
+
+        &__divider {
+            width: 70px;
+            height: 2px;
+        }
+
+        &__text {
+            height: auto;
+            width: 107px;
+
+            span {
+                display: block;
+                width: 107px;
+                transform: none;
+            }
+        }
+
+        a {
+            transform: rotate(90deg);
+        }
+
+        &_mobile {
+            width: 135px;
+            padding-left: 0;
+            margin-top: 25px;
+            justify-content: center;
+
+
+            &__divider {
+                display: none;
+            }
+            &__text {
+                
+                display: none;
+            }
+        }
     }
 
 }

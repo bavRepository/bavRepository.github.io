@@ -27,7 +27,7 @@ gulp.task('styles', function() {
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        // .pipe(gulp.dest("dist/style"))
+        .pipe(gulp.dest("dist/style"))
         .pipe(gulp.dest("src/style"))
         .pipe(browserSync.stream());
 });

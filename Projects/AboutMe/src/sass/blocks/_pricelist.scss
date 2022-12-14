@@ -1,13 +1,12 @@
 .pricelist {
-    padding-top: 60px;
+    padding-top: 120px;
 
     &__wrapper {
-        margin: 60px auto 0 auto;
-        max-width: 1040px;
+        margin-top: 60px;
+        padding: 0 60px;
         display: grid;
         grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 365px);
         grid-auto-rows: minmax(45px, auto);
-        column-gap: 5px;
         row-gap: 15px;
         justify-content: space-between;
 
