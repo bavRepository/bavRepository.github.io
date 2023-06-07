@@ -164,20 +164,16 @@ window.addEventListener('DOMContentLoaded', function () {
         forms.forEach(form => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
-
-                // let showmodal = false;
-                // if (form.classList.contains('order__form')) {
-                //     showmodal = true;
-                // }
-
+        
+ 
                 let spinnerModal = document.createElement('img');
                 spinnerModal.src = messageModal.loading;
                 spinnerModal.style.cssText = `
-                width: 30px;
-                height: 30px;
-                display: block;
-                margin: 0 auto;
-                margin-top: 10px;
+                    width: 30px;
+                    height: 30px;
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 10px;
             `;
 
                 form.insertAdjacentElement('afterend', spinnerModal);
@@ -191,6 +187,7 @@ window.addEventListener('DOMContentLoaded', function () {
                         spinnerModal.remove();
                     }).catch(() => {
                         showThanksModal(messageModal.failure);
+                        spinnerModal.remove();
                     }).finally(() => {
                         form.reset();
                     });
@@ -218,9 +215,9 @@ window.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             closeModal();
             thanksModal.remove();
+            prevModalDialog.classList.remove('hide');
+            prevModalDialog.classList.add('show');
             if (form.classList.contains('order__form')) {
-                prevModalDialog.classList.remove('hide');
-                prevModalDialog.classList.add('show');
                 openModal();
             }
         }, 4000);
