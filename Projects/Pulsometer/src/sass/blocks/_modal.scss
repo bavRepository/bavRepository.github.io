@@ -1,0 +1,66 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 35px 28px 40px 28px;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    min-height: 400px;
+    background: #F2F2F2;
+    position: relative;
+
+    &__close {
+        font-size: 30px;
+        line-height: 16px;
+        font-weight: 500;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        color: $main-color;
+        cursor: pointer;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 19px;
+        text-align: center;
+        color: $soft-black;
+    }
+
+    &__descr {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        color: $soft-black;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    &_mini {
+        min-height: 143px;
+    }
+
+    .error {
+        border: 1px solid red;
+    }
+
+    label.error {
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+}
+
+#consultation, #order, #thanks {
+    display: none;
+}

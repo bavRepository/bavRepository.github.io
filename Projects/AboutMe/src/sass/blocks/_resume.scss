@@ -1,0 +1,98 @@
+.resume {
+    padding-top: 120px;
+
+    &__wrapper {
+        margin-top: 60px;
+        padding: 0 65px;
+        display: grid;
+        grid-template-columns:repeat(2, 420px);
+        column-gap: 135px;
+    }
+
+    &__column {
+        &-title {
+            padding-left: 35px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: $main-color;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -7px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: calc(100% + 16px);
+                    width: 1px;
+                    top: -9px;
+                    background-color: #000;
+                }
+            }
+
+        }
+    }
+
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 44px;
+            position: absolute;
+            top: 58px;
+            background-color: #000;
+        }
+        &-head {
+            h4 {
+                margin-bottom: 0;
+            }
+            padding-top: 37px;
+            padding-left: 100px;
+            position: relative;
+        }
+
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &-icon {
+            position: absolute;
+            top: 40px;
+            left: 44px;
+            @include before_circle;
+
+            img {
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+
+        }
+
+        &-location {
+            margin-top: 4px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+    }
+}
