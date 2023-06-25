@@ -28,8 +28,7 @@ function setDataToLocal(wrap, notice) {
 function getLocalNoticeInfo(data, i) {
 	let storageValue;
 	const localItems = JSON.parse(localStorage.getItem(`id${i+1}`));
-	console.log(localItems.value);
-	console.log(localItems);
+
 	switch (data) {
 		case 'x': storageValue = localItems.x;
 			break;
