@@ -71,7 +71,7 @@ function clearZIndex() {
 
 
 function delDataFroLocal(elem) {
-	localStorage.removeItem(`elemCoord${elem.getAttribute('data-index')}`);
+	localStorage.removeItem(`id${elem.getAttribute('data-index')}`);
 }
 
 function setUpNoticeSettings() {
