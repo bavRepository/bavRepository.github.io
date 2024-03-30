@@ -4,26 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-	<script defer src="bundle.3aedcfeb2148b2ebc0e8.js"></script></head>
+	<script defer src="bundle.7c2e5721b8f20cc8c781.js"></script></head>
 	<body>
-		<section class="expenses">
-			<div class="expenses__adding">
-				<div class="expenses__adding-date"></div>
-
-				<form action="#" class="expenses__adding-new">
-					<button type="submit" class="expenses__adding-addMenuItem">Добавить позицию</button>
-					<input type="text" placeholder="новая растрата" required name="name" />
-				</form>
+		<div class="overlay">
+			<div class="menu">
+				<button class="menu-b">Закрыть</button>
 			</div>
+			<div class="back"></div>
+		</div>
+		<section class="main">
+			<button class="main-b">НАЖМИ</button>
 		</section>
-
-		<div class="expenses__wrapper">
-			<canvas id="outlabeledChart"></canvas>
-		</div>
-		<div>
-			<canvas id="myChart"></canvas>
-		</div>
-		<script src="https://rawgit.com/chartjs/chartjs.github.io/master/dist/master/Chart.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels"></script>
+		<section class="second"></section>
+		<audio id="sounds" loop="true" volume="100">
+			<source src="asset/accapebd865a879027eaa251e.mp3" id="A" type="audio/mp3" />
+		</audio>
 	</body>
 </html>
