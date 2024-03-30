@@ -826,6 +826,8 @@ __webpack_require__.r(__webpack_exports__);
 
 async function test() {
   const myAudio = new Audio(_assets_accap_mp3__WEBPACK_IMPORTED_MODULE_0__);
+  window.userHasUnmuted = false;
+  window.liveStreamStarted = false;
   let int,
     animation = true,
     startColoFirstElem = 'tomato',
@@ -11024,4 +11026,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.0108bed83e6b88b614bc.js.map
+//# sourceMappingURL=bundle.fdb2e00bc245e9fddef0.js.map
