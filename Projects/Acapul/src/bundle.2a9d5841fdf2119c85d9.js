@@ -840,6 +840,7 @@ async function test() {
     second = document.querySelector('.second');
   document.querySelector('.main-b').addEventListener('click', function (e) {
     e.preventDefault;
+    document.body.overflow = 'hidden';
     myAudio.play();
     animation = true;
     e.currentTarget.style.display = 'none';
@@ -867,6 +868,7 @@ async function test() {
     myAudio.pause();
     myAudio.currentTime = 0;
     animation = false;
+    document.body.overflow = 'auto';
     document.querySelector('.main-b').style.display = 'block';
     menu.classList.remove('menu_active');
     overlay.classList.remove('overlay_active');
@@ -11021,4 +11023,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.2c1d6813ccc442a472e0.js.map
+//# sourceMappingURL=bundle.2a9d5841fdf2119c85d9.js.map
