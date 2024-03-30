@@ -840,7 +840,7 @@ async function test() {
     second = document.querySelector('.second');
   document.querySelector('.main-b').addEventListener('click', function (e) {
     e.preventDefault;
-    document.body.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
     myAudio.play();
     animation = true;
     e.currentTarget.style.display = 'none';
@@ -856,6 +856,7 @@ async function test() {
     }
     int = setInterval(() => {
       if (animation) {
+        console.log(int);
         main.style.backgroundColor = `${dynamicColors()}`;
         second.style.backgroundColor = `${dynamicColors()}`;
       } else {
@@ -868,7 +869,7 @@ async function test() {
     myAudio.pause();
     myAudio.currentTime = 0;
     animation = false;
-    document.body.overflow = 'auto';
+    document.body.style.overflow = 'auto';
     document.querySelector('.main-b').style.display = 'block';
     menu.classList.remove('menu_active');
     overlay.classList.remove('overlay_active');
@@ -11023,4 +11024,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.2a9d5841fdf2119c85d9.js.map
+//# sourceMappingURL=bundle.0108bed83e6b88b614bc.js.map
