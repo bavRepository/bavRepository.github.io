@@ -825,11 +825,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_accap_mp3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../assets/accap.mp3 */ "./src/assets/accap.mp3");
 
 async function test() {
-  const myAudio = new Audio(myAudiolResource);
+  const myAudio = new Audio(_assets_accap_mp3__WEBPACK_IMPORTED_MODULE_0__);
   let int,
     animation = true,
     startColoFirstElem = 'tomato',
     startColoSecondElem = 'brown';
+  myAudio.addEventListener('ended', function () {
+    this.currentTime = 0;
+    this.play();
+  }, false);
   const overlay = document.querySelector('.overlay'),
     menu = document.querySelector('.menu'),
     main = document.querySelector('.main'),
@@ -860,6 +864,8 @@ async function test() {
   });
   document.querySelector('.menu-b').addEventListener('click', function (e) {
     e.preventDefault;
+    myAudio.pause();
+    myAudio.currentTime = 0;
     animation = false;
     document.querySelector('.main-b').style.display = 'block';
     menu.classList.remove('menu_active');
@@ -10519,48 +10525,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/html-loader/dist/runtime/getUrl.js */ "./node_modules/html-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./assets/accap.mp3 */ "./src/assets/accap.mp3"), __webpack_require__.b);
 // Module
-var ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);
-var code = "<!doctype html>\r\n<html lang=\"en\">\r\n\t<head>\r\n\t\t<meta charset=\"UTF-8\" />\r\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n\t\t<title>Document</title>\r\n\t</head>\r\n\t<body>\r\n\t\t<div class=\"overlay\">\r\n\t\t\t<div class=\"menu\">\r\n\t\t\t\t<button class=\"menu-b\">Закрыть</button>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"back\"></div>\r\n\t\t</div>\r\n\t\t<section class=\"main\">\r\n\t\t\t<button class=\"main-b\">НАЖМИ</button>\r\n\t\t</section>\r\n\t\t<section class=\"second\"></section>\r\n\t\t<audio id=\"sounds\" loop=\"true\" volume=\"100\">\r\n\t\t\t<source src=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\" id=\"A\" type=\"audio/mp3\" />\r\n\t\t</audio>\r\n\t</body>\r\n</html>\r\n";
+var code = "<!doctype html>\r\n<html lang=\"en\">\r\n\t<head>\r\n\t\t<meta charset=\"UTF-8\" />\r\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n\t\t<title>Document</title>\r\n\t</head>\r\n\t<body>\r\n\t\t<div class=\"overlay\">\r\n\t\t\t<div class=\"menu\">\r\n\t\t\t\t<button class=\"menu-b\">Закрыть</button>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"back\"></div>\r\n\t\t</div>\r\n\t\t<section class=\"main\">\r\n\t\t\t<button class=\"main-b\">НАЖМИ</button>\r\n\t\t</section>\r\n\t\t<section class=\"second\"></section>\r\n\t</body>\r\n</html>\r\n";
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
-
-/***/ }),
-
-/***/ "./node_modules/html-loader/dist/runtime/getUrl.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/html-loader/dist/runtime/getUrl.js ***!
-  \*********************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    // eslint-disable-next-line no-param-reassign
-    options = {};
-  }
-  if (!url) {
-    return url;
-  }
-
-  // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-  url = String(url.__esModule ? url.default : url);
-  if (options.hash) {
-    // eslint-disable-next-line no-param-reassign
-    url += options.hash;
-  }
-  if (options.maybeNeedQuotes && /[\t\n\f\r "'=<>`]/.test(url)) {
-    return "\"".concat(url, "\"");
-  }
-  return url;
-};
 
 /***/ }),
 
@@ -10929,9 +10897,6 @@ module.exports = __webpack_require__.p + "asset/accapebd865a879027eaa251e.mp3";
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -11008,32 +10973,6 @@ module.exports = __webpack_require__.p + "asset/accapebd865a879027eaa251e.mp3";
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"main": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -11082,4 +11021,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.7c2e5721b8f20cc8c781.js.map
+//# sourceMappingURL=bundle.2c1d6813ccc442a472e0.js.map
