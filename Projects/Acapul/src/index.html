@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	<script defer src="bundle.3aedcfeb2148b2ebc0e8.js"></script></head>
+	<body>
+		<section class="expenses">
+			<div class="expenses__adding">
+				<div class="expenses__adding-date"></div>
+
+				<form action="#" class="expenses__adding-new">
+					<button type="submit" class="expenses__adding-addMenuItem">Добавить позицию</button>
+					<input type="text" placeholder="новая растрата" required name="name" />
+				</form>
+			</div>
+		</section>
+
+		<div class="expenses__wrapper">
+			<canvas id="outlabeledChart"></canvas>
+		</div>
+		<div>
+			<canvas id="myChart"></canvas>
+		</div>
+		<script src="https://rawgit.com/chartjs/chartjs.github.io/master/dist/master/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-piechart-outlabels"></script>
+	</body>
+</html>
